@@ -1,4 +1,4 @@
-module.exports = function toReadable(number) {
+function toReadable(number) {
     let wordNumbers = {
         0: "zero",
         1: "one",
@@ -50,9 +50,7 @@ module.exports = function toReadable(number) {
     }`;
     strNumber = strNumber.slice(1);
     number = parseInt(strNumber);
-    if (number == 0) {
-        return hundred;
-    }
+
     if (number < 20) {
         return `${hundred} ${wordNumbers[number]}`;
     } else if (strNumber[1] > 0) {
@@ -62,4 +60,6 @@ module.exports = function toReadable(number) {
     } else {
         return `${hundred} ${wordNumbers[number]}`;
     }
-};
+}
+
+console.log(toReadable(405));
