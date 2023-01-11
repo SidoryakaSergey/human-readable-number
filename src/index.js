@@ -38,9 +38,7 @@ module.exports = function toReadable(number) {
     }
     if (number < 100) {
         if (strNumber[1] > 0) {
-            return `${wordNumbers[parseInt(strNumber[0] + "0")]} ${
-                wordNumbers[parseInt(strNumber[1])]
-            }`;
+            return `${wordNumbers[parseInt(strNumber[0] + "0")]} ${wordNumbers[parseInt(strNumber[1])]}`;
         } else {
             return wordNumbers[number];
         }
