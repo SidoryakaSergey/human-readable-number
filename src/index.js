@@ -45,9 +45,7 @@ module.exports = function toReadable(number) {
             return wordNumbers[number];
         }
     }
-    const hundred = `${wordNumbers[parseInt(strNumber[0])]} ${
-        wordNumbers[100]
-    }`;
+    const hundred = `${wordNumbers[parseInt(strNumber[0])]} ${wordNumbers[100]}`;
     strNumber = strNumber.slice(1);
     number = parseInt(strNumber);
     if (number == 0) {
@@ -56,8 +54,7 @@ module.exports = function toReadable(number) {
     if (number < 20) {
         return `${hundred} ${wordNumbers[number]}`;
     } else if (strNumber[1] > 0) {
-        return `${hundred} ${wordNumbers[parseInt(strNumber[0] + "0")]} ${
-            wordNumbers[parseInt(strNumber[1])]
+        return `${hundred} ${wordNumbers[parseInt(strNumber[0] + "0")]} ${wordNumbers[parseInt(strNumber[1])]
         }`;
     } else {
         return `${hundred} ${wordNumbers[number]}`;
